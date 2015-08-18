@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Пример аватар</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="css/avatar.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <div id="globalMessage">
+        <div></div>
+        <div>
+            <span class="close">&#x2716;</span>
+        </div>
+    </div>
+
+    <div id="addAvatar">
+        <div class="avatar-drop-zone">
+            <form name="avatar" enctype="multipart/form-data" action="handlers/avatar.php" method="post">
+                <label for="avatarSelect">добавь аватар</label>
+                <input id="avatarSelect" class="avatar-select" type="file" name="avatar" />
+                <input type="hidden" class="avatar-owner" name="material" value="1" />
+                <label for="submitAvatar">отправь аватар</label>
+                <input type="submit" id="submitAvatar" name="addAvatar" value="добавить" />
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/avatar.js"></script>
+</body>
+</html>
+

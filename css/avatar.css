@@ -1,0 +1,164 @@
+html, body {
+    height:100%;
+}
+
+body {
+    margin: 0;
+    background: lightgrey;
+}
+
+#wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    background: white;
+}
+
+#addAvatar
+{
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.5);
+}
+
+.avatar-drop-zone
+{
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #cdb38b;
+    box-shadow: inset 0 0 10px white;
+}
+
+.avatar-drop-zone label, .avatar-drop-zone [type=submit], .avatar-drop-zone .avatar-select {
+    display: none;
+}
+
+label[for=submitAvatar] {
+    display: none;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+label[for=avatarSelect], .load-av, .load-av-prg {
+    display: block;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+label[for=avatarSelect], label[for=submitAvatar], .load-av {
+    font-variant: small-caps;
+    text-align: center;
+    background: white;
+    box-shadow: inset 0 0 5px lightgrey;
+}
+
+label[for=avatarSelect], label[for=submitAvatar] {
+    cursor: pointer;
+    margin: 10px auto;
+    transition: background-color 0.5s ease 0s;
+}
+
+label[for=avatarSelect]:hover {
+    color: white;
+    background: #FF8C00;
+    box-shadow: inset 0 0 10px #FF4500;
+}
+
+label[for=submitAvatar]:hover {
+    color: white;
+    background: green;
+    box-shadow: inset 0 0 10px #90ee90;
+}
+
+.load-av
+{
+    position: relative;
+    height: 15px;
+    margin: 15px auto;
+    overflow: hidden;
+}
+
+.load-av span
+{
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 18%;
+    z-index: 5;
+}
+
+.load-av-prg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 15px;
+    background: #FF8C00;
+}
+
+.avatar-drop-zone img
+{
+    width: 60px;
+    height: 60px;
+}
+
+/* сообщение &#x2716; */
+#globalMessage {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: none;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 7px;
+    color: white;
+    background: black;
+    background: rgba(0,0,0,0.6);
+    box-shadow: inset 0 0 10px white;
+}
+
+#globalMessage > div {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#globalMessage > div:first-child {
+    padding-right: 30px;
+}
+
+#globalMessage > div:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 7px;
+    background: red;
+    background: rgba(255,0,0,0.7);
+}
+
+#globalMessage .close {
+    cursor: pointer;
+}
+
+#globalMessage.avatar-error {
+    background: red;
+    background: rgba(255,0,0,0.5);
+}
+
+#globalMessage.avatar-success {
+    background: black;
+    background: rgba(0,0,0,0.6);
+}
+
+#globalMessage.avatar-warning {
+    background: orange;
+    background: rgba(255,125,0,0.6);
+}
